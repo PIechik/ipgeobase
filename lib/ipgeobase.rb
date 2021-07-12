@@ -7,7 +7,7 @@ require "happymapper"
 
 module Ipgeobase
   class Error < StandardError; end
-  # Your code goes here...
+
   def self.lookup(ip)
     uri = Addressable::URI.parse("http://ip-api.com/xml/#{ip}?fields=24787")
     res = Net::HTTP.get_response(uri)
